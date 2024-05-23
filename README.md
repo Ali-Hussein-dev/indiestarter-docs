@@ -1,54 +1,59 @@
-# Starlight Starter Kit: Basics
+# Indie Starter Kit
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+## Project setup
+
+This document provides detailed instructions to set up our Nextjs boilerplate, Indie Starter. Follow these steps to expedite your development process with our streamlined processes and features.
+
+## Repository Access
+
+To access the Indie Starter repository, purchase a plan. We offer two options: the Pro plan and the Starter plan. [Learn more about the plans](https://indie-starter.dev/#pricing)
+
+After purchasing a plan, clone the repository using the appropriate command:
+
+For Pro plan:
+
+```bash
+git clone https://github.com/Ali-Hussein-dev/indiestarter-pro [YOUR_APP_NAME]
 
 ```
-npm create astro@latest -- --template starlight
-```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+For Starter plan:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+```bash
+git clone https://github.com/Ali-Hussein-dev/indiestarter-starter [YOUR_APP_NAME]
 
 ```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   │   └── config.ts
-│   └── env.d.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+
+## Project Configuration
+
+Use the following command to move into your project directory:
+
+```bash
+cd [YOUR_APP_NAME]
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+### Set the Remote Origin
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+Set the remote origin to your repository using the following command:
 
-Static assets, like favicons, can be placed in the `public/` directory.
+```bash
+git remote set-url origin [YOUR_REPOSITORY_URL]
+```
 
-## 🧞 Commands
+### Install Dependencies
 
-All commands are run from the root of the project, from a terminal:
+Install the necessary dependencies with the following command:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+pnpm install
+```
 
-## 👀 Want to learn more?
+### Add environment variables
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+Copy the `.env.example` file to `.env.local` and fill in the environment variables. Refer to our [Environment Variables](/guides/environment-variables) documentation for more details.
+
+Start the development server with:
+
+```bash
+pnpm dev
+```
