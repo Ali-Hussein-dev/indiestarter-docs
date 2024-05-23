@@ -2,6 +2,7 @@
 title: Environment Variables
 description: Learn how to use environment variables in Indie Starter.
 ---
+import { Aside } from '@astrojs/starlight/components';
 
 Indie Starter uses [@t3-oss/env-nextjs↗](https://env.t3.gg) along with [zod↗](https://zod.dev) under the hood for validating environment variables at runtime and buildtime by providing a simple logic in `src/env.js`.
 
@@ -59,9 +60,9 @@ To ensure your build never completes without the environment variables the proje
 
 📄 env.js: Add the appropriate validation logic for the environment variables by defining a Zod schema inside createEnv for each one, e.g. `KEY: z.string()`. Besides that, make sure to destruct them in the runtimeEnv option, e.g.: `KEY: process.env.KEY`
 
-{% callout type="note" title="Why do I need to destructure the env variable in the `runtimeEnv`?" %}
+<Aside type='note' title="Why do I need to destructure the env variable in the `runtimeEnv`?">
 This is due to how Next.js bundles environment variables in certain runtimes. By destructuring it manually, you ensure that the variable will never be stripped out from the bundle.
-{% /callout %}
+</Aside>
 
 ## Type Coercion
 

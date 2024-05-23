@@ -10,16 +10,20 @@ export default defineConfig({
     customCss: ['./src/tailwind.css',],
     social: {
       github: 'https://github.com/Ali-Hussein-dev/indiestarter-docs'
+      , discord: "https://discord.gg/gZMBUAvpBU"
     },
     sidebar: [{
-      label: 'Guides',
-      items: [{
-        label: 'Get started',
-        link: '/guides/get-started/'
-      }, {
-        label: 'Why indie starter',
-        link: '/guides/why-indie-starter/'
-      }]
+      label: 'Getting started',
+      items: [
+        {
+          label: 'Why indie starter',
+          link: '/guides/why-indie-starter/'
+        }
+        , {
+          label: 'Installation',
+          link: '/guides/installation/'
+        },
+      ]
     }, {
         label: 'Configuration',
         items: [{
