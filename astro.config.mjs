@@ -16,6 +16,7 @@ export default defineConfig({
     },
     sidebar: [{
       label: 'Getting started',
+      collapsed: true,
       items: [
         {
           label: 'Why indie starter',
@@ -28,6 +29,7 @@ export default defineConfig({
       ]
     }, {
         label: 'Configuration',
+      collapsed: true,
         items: [{
           label: 'Global configuration',
           link: '/guides/global-configuration'
@@ -40,12 +42,14 @@ export default defineConfig({
         }]
       }, {
         label: 'Architecture',
+      collapsed: true,
         items: [{
           label: 'Folder Structure',
           link: '/guides/folder-structure'
         }]
       }, {
         label: 'Supabase',
+      collapsed: true,
         items: [{
           label: 'Setup DB',
           link: '/guides/setup-db'
@@ -58,12 +62,14 @@ export default defineConfig({
         }]
       }, {
         label: 'Payments Integration',
+      collapsed: true,
         items: [{
           label: 'Stripe',
           link: '/guides/stripe'
         }]
       }, {
         label: 'UI ',
+      collapsed: true,
         items: [{
           label: 'Shadcn/UI setup',
           link: '/guides/shadcn'
@@ -76,12 +82,14 @@ export default defineConfig({
         }]
       }, {
         label: 'Mails',
+      collapsed: true,
         items: [{
           label: 'Resend',
           link: '/guides/resend'
         }]
       }, {
         label: 'Analytics',
+      collapsed: true,
         items: [{
           label: 'Setup',
           link: '/guides/analytics'
