@@ -7,7 +7,9 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [starlight({
     title: 'Docs',
-    customCss: ['./src/tailwind.css',],
+    // logo: { src: "indie-starter.dev/favicon.ico" },
+
+    customCss: ['./src/tailwind.css'],
     social: {
       github: 'https://github.com/Ali-Hussein-dev/indiestarter-docs'
       , discord: "https://discord.gg/gZMBUAvpBU"
@@ -89,5 +91,8 @@ export default defineConfig({
     {
       applyBaseStyles: false,
     }
-  )]
+    )],
+  redirects: {
+    '/': '/guides/why-indie-starter',
+  }
 });
