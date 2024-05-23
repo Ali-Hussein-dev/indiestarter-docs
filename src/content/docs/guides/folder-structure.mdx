@@ -1,0 +1,37 @@
+---
+title: Folder Structure
+description: Learn how to navigate the folder structure of a Indie Starter application.
+---
+import { FileTree } from '@astrojs/starlight/components';
+
+The folder structure might be a bit different depending on the plan you choose, the pro plan project contains more folders and files than the starter plan project.
+The folder structur is conventional and simple, so you can easily navigate through the files and folders.
+
+<FileTree>
+- src
+  - app
+    - api/
+  - components/
+  - actions/
+  - hooks/
+  - lib
+    - supabase/
+    - stripe/
+  - scripts/
+  - types/
+  - configs.ts
+  - env.js
+  - …
+</FileTree>
+
+To import a file from the `src` folder you can use the `@/` alias, for example:
+
+```tsx
+import { Button } from '@/components/Button';
+// also
+import { useAuth } from '@/hooks/useAuth'; 
+// and last
+import { supabase } from '@/configs';
+```
+
+You can customize the import alias in the `tsconfig.json` file.
