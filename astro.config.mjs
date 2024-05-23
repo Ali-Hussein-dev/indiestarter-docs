@@ -5,21 +5,44 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Docs',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/Ali-Hussein-dev/indiestarter-docs',
 			},
 			sidebar: [
 				{
 					label: 'Guides',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
+						{ label: 'Get started', link: '/guides/get-started/' },
+						{ label: 'Why indie starter', link: '/guides/why-indie-starter/' },
+					],
+				},
+
+				{
+					label: 'Configuration',
+					items: [
+						{ label: 'Global configuration', link: '/guides/global-configuration' },
+						{ label: 'Environment Variables', link: '/guides/environment-variables' },
+						{ label: 'SEO', link: '/guides/seo' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Architecture',
+					items: [{ label: 'Folder Structure', link: '/guides/folder-structure' }],
+				},
+				{
+					label: 'Supabase',
+					items: [
+						{ label: 'Setup DB', link: '/guides/setup-db' },
+						{ label: 'Initialize Supabase', link: '/guides/initialize-supabase' },
+						{ label: 'Authentication', link: '/guides/authentication' },
+					],
+				},
+				{
+					label: 'Payments Integration',
+					items: [
+						{ label: 'Stripe', link: '/guides/stripe' },
+					],
 				},
 			],
 		}),
