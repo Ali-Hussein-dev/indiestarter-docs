@@ -7,8 +7,11 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [starlight({
     title: 'Docs',
-    // logo: { src: "indie-starter.dev/favicon.ico" },
-
+    logo: {
+      dark: "./src/assets/logo.svg",
+      light: "./src/assets/logo.svg"
+    },
+    favicon: "./favicon.ico",
     customCss: ['./src/tailwind.css'],
     social: {
       github: 'https://github.com/Ali-Hussein-dev/indiestarter-docs'
