@@ -2,11 +2,18 @@
 title: setup DB
 description: Setup Supabase and DB schema
 ---
-import { Tabs, TabItem } from '@astrojs/starlight/components';
 
-Supabase account is required to setup the database. If you don't have an account, you can create one [here](https://supabase.com).
+## Set up a Supabase project
+
+Head over to [database.new](https://database.new) and create a new Supabase project.
+
+When your project is up and running, navigate to the [Table Editor](https://supabase.com/dashboard/project/_/editor), create a new table and insert some data.
+
+Alternatively, you can run the following snippet in your project's [SQL Editor](https://supabase.com/dashboard/project/_/sql/new).
 
 ## Create tables in DB
+
+You need to create only one table in the DB, which is the `accounts` table. This table will store the user's account information such as `id`, `email`, `customer_id`, `plan`, `price_id`, `has_access`, `session_id`, and `customer_details`. The `id` column is a foreign key that references the `id` column in the `auth.users` table. The `auth.users` table is created by Supabase when you enable authentication in your project.
 
 ### `accounts` table
 
