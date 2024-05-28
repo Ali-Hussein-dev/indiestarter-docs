@@ -2,12 +2,15 @@
 title: setup DB
 description: Setup Supabase and DB schema
 ---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 
 Supabase account is required to setup the database. If you don't have an account, you can create one [here](https://supabase.com).
 
-## Create "accounts" table
+## Create tables in DB
 
-copy the following SQL snippet and run it in SQL editor in your Supabase dashboard.
+### `accounts` table
+
+In order to create a table `accounts` in the public schema with the following columns, you can execute the following SQL query in the SQL editor of the Supabase dashboard.
 
 ```sql
 CREATE TABLE public.accounts (
@@ -23,16 +26,14 @@ CREATE TABLE public.accounts (
 
   primary key (id)
 );
-
-ALTER table public.accounts enable row level security;
 ```
 
-## Insert a row into the accounts table when a user signs up
+### Handle new user signup
 
-Now to insert a row into the accounts table, when users signup, you can run the following SQL snippet into your Supabase dashboard SQL editor:
+When a user signs up, you may want to insert a row into the accounts table. To do this, you can create a function `handle_new_user` (feel free to name what you want) that will be insert a row into the accounts table with two columns `id` and `email`. In order to trigger the function, you need to create a trigger `on_auth_user_created` that will trigger the function every time a user is created.
 
 ```sql
--- inserts a row into public.accounts
+-- Insert a row into the accounts table when a user signs up
 CREATE function public.handle_new_user () returns trigger language plpgsql security definer
 set
   search_path = public as $$
@@ -49,28 +50,44 @@ after INSERT on auth.users for each row
 execute procedure public.handle_new_user ();
 ```
 
-## Enable row level security (RLS)
+### Security: Enable RLS on the `accounts` table
 
-After you enabled RLS on table "accounts", you need to create two policies that will allow authenticated users to read and insert data into the accounts table.
+Currently the `accounts` table is open to all users. To restrict access to the table, you can enable Row Level Security (RLS) on the table, through SQL Editor or the Supabase dashboard.
 
 ```sql
-CREATE POLICY "Enable read for authenticated users only" ON public.accounts FOR
-SELECT
-  TO authenticated;
+-- enable row level security
+ALTER table public.accounts enable row level security;
+
 ```
 
+Now create a policy that allows **only authenticated users** to read `SELECT` and `INSERT` data into the `accounts` table.
+
 ```sql
-CREATE POLICY "Enable insert for authenticated users only" ON public.accounts FOR
+-- enable read for authenticated users only
+CREATE POLICY "Enable read for authenticated users only" 
+ON public.accounts FOR
+SELECT
+  TO authenticated;
+
+-- enable insert for authenticated users only
+CREATE POLICY "Enable insert for authenticated users only" 
+ON public.accounts FOR
 INSERT
   TO authenticated
 WITH
   CHECK (TRUE);
+
 ```
 
-## Generate Types from DB schema
+## Generate Types For TypeScript
 
-To verify that the types in your repository align with the DB schema, simply execute the following command in your terminal to generate type definitions from the DB schema.
+To verify that the types in your repository align with the DB schema, simply execute the following command in your terminal to generate type definitions from the DB schema. for more details check the [Supabase Docs](https://supabase.com/docs/reference/cli/supabase-gen-types)
 
 ```bash
+
+  npx supabase gen types typescript --project-id <projectId> > src/types/db.types.ts
+
+  # OR use the following script in package.json (Make sure SUPABASE_PROJECT_ID in .env.local)
   pnpm schema # or npm run schema or yarn schema
+
 ```
