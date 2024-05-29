@@ -1,14 +1,58 @@
 ---
 title: Indie Starter Docs
-description: Get started building your docs site with Starlight.
-template: splash
-hero:
-  tagline: Welcome to Indie Starter Docs
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/installation/
-      icon: right-arrow
-      variant: primary
+description: Setup Guides and instructions on how to build setup your repository
 ---
+import { LinkCard, CardGrid } from "@astrojs/starlight/components"
+
+Indie Starter Kit is designed to be minmial, but powerful stater point. Easy to learn and setup. 
+
+## Quick Links 
+
+<CardGrid>
+  <LinkCard
+    title="Setup your project"
+    description="Learn how to setup Indie Starter"
+    href="/guides/installation/"
+  />
+  <LinkCard
+    title="Environment Variables"
+    description="Learn more about type safe environment variables"
+    href="/guides/environment-variables"
+  />
+  <LinkCard
+    title="Supabase Guide"
+    href="/guides/setup-db/"
+    description="Learn how to setup Supabase in your project"
+  />
+  <LinkCard
+    title="Payments integration Guide"
+    href="/guides/authoring-content/"
+    description="Stripe setup for guide"
+  />
+</CardGrid>
+
+## Features
+
+⚡ Next.js 14 with App Router support
+
+🔥 Type checking TypeScript
+
+💎 Integrate with Tailwind CSS
+
+✅ Strict Mode for TypeScript and React 18
+
+🔒 Authentication with Supabase
+
+♻️ Type-safe environment variables with T3 Env
+
+🔴 Validation library with Zod
+
+📏 Linter with ESLint
+
+💖 Code Formatter with Prettier
+
+🦊 Husky for Git Hooks (coming soon)
+
+🤖 SEO metadata, and Open Graph tags
+
+🗺️ Sitemap.xml and robots.txt

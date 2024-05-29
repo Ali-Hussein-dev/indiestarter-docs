@@ -103,7 +103,4 @@ export default defineConfig({
       applyBaseStyles: false,
     }
     )],
-  redirects: {
-    '/': '/guides/why-indie-starter',
-  }
 });
