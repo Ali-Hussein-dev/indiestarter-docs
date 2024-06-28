@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config"
 import starlight from "@astrojs/starlight"
-
+import starlightThemeRapide from 'starlight-theme-rapide'
 import tailwind from "@astrojs/tailwind"
 
 // https://astro.build/config
@@ -137,6 +137,7 @@ export default defineConfig({
           ],
         },
       ],
+      plugins: [starlightThemeRapide()]
     }),
     tailwind({
       applyBaseStyles: false,

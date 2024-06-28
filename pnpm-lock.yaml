@@ -7,6 +7,7 @@ specifiers:
   '@astrojs/tailwind': ^5.1.0
   astro: ^4.11.3
   sharp: ^0.32.5
+  starlight-theme-rapide: ^0.1.1
   tailwindcss: ^3.4.3
   typescript: ^5.4.5
 
@@ -17,6 +18,7 @@ dependencies:
   '@astrojs/tailwind': 5.1.0_z6ynkgepx7vwgarbixmef4xfri
   astro: 4.11.3_typescript@5.4.5
   sharp: 0.32.6
+  starlight-theme-rapide: 0.1.1_@astrojs+starlight@0.24.4
   tailwindcss: 3.4.3
   typescript: 5.4.5
 
@@ -4333,6 +4335,15 @@ packages:
 
   /sprintf-js/1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
+    dev: false
+
+  /starlight-theme-rapide/0.1.1_@astrojs+starlight@0.24.4:
+    resolution: {integrity: sha512-jVACnhIAVcdnlgIC0VceECMLWxn5rpqg3Ei+YfYigrAzCHdulMma/DIO7X7mH8193kVIoSphUl1z6DJ00a0lUQ==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.23.0'
+    dependencies:
+      '@astrojs/starlight': 0.24.4_astro@4.11.3
     dev: false
 
   /stdin-discarder/0.2.2:
