@@ -50,10 +50,6 @@ export default defineConfig({
               label: "SEO",
               link: "/guides/seo",
             },
-            {
-              label: "Scripts",
-              link: "/guides/scripts",
-            },
           ],
         },
         {
