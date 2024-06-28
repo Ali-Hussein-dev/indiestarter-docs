@@ -1,62 +1,84 @@
 ---
-title: Installation
-description: Learn how to install Indie Starter.
+title: Installation Guide
+description: A comprehensive guide to installing and setting up Indie Starter for your project.
 ---
 
-## Project setup
+## Overview
 
-This document provides detailed instructions to set up our Nextjs boilerplate, Indie Starter. Follow these steps to expedite your development process with our streamlined processes and features.
+Welcome to the Indie Starter installation guide. This document outlines the steps to set up the Indie Starter Next.js boilerplate and Indie directory template, designed to kickstart your development with a suite of streamlined processes and features.
 
-## Repository Access
+## Getting Started
 
-To access the Indie Starter repository, purchase a plan. We offer two options: the Pro plan and the Starter plan. [Learn more about the plans](https://indie-starter.dev/#pricing)
+### Access the Repository
 
-After purchasing a plan, clone the repository using the appropriate command:
+To begin, you'll need access to the Indie Starter repository. For more information and to choose the plan that's right for you, visit our [templates page](https://indie-starter.dev/templates).
 
-For Pro plan:
+### Clone the Repository
 
-```bash
-git clone https://github.com/Ali-Hussein-dev/indiestarter-pro [YOUR_APP_NAME]
+Once you've selected a plan, clone the repository to your local machine using the command corresponding to your chosen plan:
 
-```
+- **Pro Plan**
 
-For Starter plan:
+  ```bash
+  git clone https://github.com/Ali-Hussein-dev/indiestarter-pro [YOUR_APP_NAME]
+  ```
 
-```bash
-git clone https://github.com/Ali-Hussein-dev/indiestarter-starter [YOUR_APP_NAME]
+- **Starter Plan**
 
-```
+  ```bash
+  git clone https://github.com/Ali-Hussein-dev/indiestarter-starter [YOUR_APP_NAME]
+  ```
 
-## Project Configuration
+- **Indie Directory**
 
-Use the following command to move into your project directory:
+  ```bash
+  git clone https://github.com/Ali-Hussein-dev/indiestarter-starter [YOUR_APP_NAME]
+  ```
+
+Replace `[YOUR_APP_NAME]` with the desired name for your project.
+
+## Set Up Your Project
+
+### Navigate to Your Project Directory
+
+Change into your project directory with the following command:
 
 ```bash
 cd [YOUR_APP_NAME]
 ```
 
-### Set the Remote Origin
+### Configure the Remote Origin
 
-Set the remote origin to your repository using the following command:
+Set the remote origin to point to your repository:
 
 ```bash
 git remote set-url origin [YOUR_REPOSITORY_URL]
 ```
 
+Ensure you replace `[YOUR_REPOSITORY_URL]` with the URL of your own repository.
+
 ### Install Dependencies
 
-Install the necessary dependencies with the following command:
+Install all necessary dependencies by running:
 
 ```bash
 pnpm install
 ```
 
-### Add environment variables
+### Set Up Environment Variables
 
-Copy the `.env.example` file to `.env.local` and fill in the environment variables. Refer to our [Environment Variables](/guides/environment-variables) documentation for more details.
+Copy the `.env.example` file to `.env.local` and update it with your specific environment variables. For detailed instructions on each variable, refer to our [Environment Variables guide](/guides/environment-variables).
 
-Start the development server with:
+### Run the Development Server
+
+Start your development server to see your project in action:
 
 ```bash
 pnpm dev
 ```
+
+Visit `http://localhost:3000` in your browser to view your project.
+
+---
+
+Congratulations! You've successfully set up Indie Starter for your project. For further customization and advanced features, explore our documentation.
