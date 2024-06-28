@@ -15,7 +15,6 @@ Alternatively, you can run the following snippet in your project's [SQL Editor](
 
 Copy the file `supabase/schema.sql` and paste in the [SQL Editor](https://supabase.com/dashboard/project/_/sql/new) and run the query. This will create your DB tables, RLS policies, and functions.
 
-
 ## Generate Types For TypeScript
 
 To verify that the types in your repository align with the DB schema, simply execute the following command in your terminal to generate type definitions from the DB schema. for more details check the [Supabase Docs](https://supabase.com/docs/reference/cli/supabase-gen-types)
