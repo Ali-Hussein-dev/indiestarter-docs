@@ -4,17 +4,6 @@ import starlight from "@astrojs/starlight"
 import tailwind from "@astrojs/tailwind"
 const { NODE_ENV } = process.env
 
-const isProd = NODE_ENV === "production"
-
-const analyticsScript = {
-  tag: "script",
-  attrs: {
-    src: "https://aliytics.netlify.app/script.js",
-    "data-website-id": "79926bd3-821e-4507-ae3d-45154c61bf8c",
-    defer: true,
-  },
-};
-
 
 // https://astro.build/config
 export default defineConfig({
@@ -146,7 +135,6 @@ export default defineConfig({
           ],
         },
       ],
-      head: isProd ? [analyticsScript] : [],
     }),
     tailwind({
       applyBaseStyles: false,
