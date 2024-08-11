@@ -97,6 +97,16 @@ export default defineConfig({
           ],
         },
         {
+          label: "Sanity",
+          collapsed: true,
+          items: [
+            {
+              label: "Setup",
+              link: "/guides/sanity-setup",
+            },
+          ],
+        },
+        {
           label: "UI ",
           collapsed: true,
           items: [
@@ -135,6 +145,7 @@ export default defineConfig({
           ],
         },
       ],
+
     }),
     tailwind({
       applyBaseStyles: false,
