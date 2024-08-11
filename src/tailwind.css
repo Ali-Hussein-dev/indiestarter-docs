@@ -5,7 +5,7 @@
 
 /* Ref: https: //github.com/withastro/starlight/blob/main/packages/starlight/style/asides.css */
 .starlight-aside {
-    @apply rounded
+    @apply rounded;
 }
 
 
@@ -15,4 +15,7 @@
 
 .header {
     @apply dark:bg-slate-900 bg-white;
+}
+a {
+    text-underline-offset: 0.2rem;
 }
