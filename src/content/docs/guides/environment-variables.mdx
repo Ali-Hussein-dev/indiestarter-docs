@@ -64,6 +64,11 @@ To ensure your build never completes without the environment variables the proje
 This is due to how Next.js bundles environment variables in certain runtimes. By destructuring it manually, you ensure that the variable will never be stripped out from the bundle.
 </Aside>
 
+<Aside type='note' title="Sanity env variables">
+Read more about env variables for Sanity [here](/docs/guides/sanity-setup).
+</Aside>
+
+
 ## Type Coercion
 
 All variables you add to .env will be imported as strings, even if their value is intended to represent a different type. If you want to use your environment variables as a different type at runtime, you can use Zod’s coerce to convert the string to the type you want. It will throw if the coercion fails.

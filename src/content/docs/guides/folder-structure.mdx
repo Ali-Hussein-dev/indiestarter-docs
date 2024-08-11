@@ -17,6 +17,8 @@ The folder structur is conventional and simple, so you can easily navigate throu
 - `scripts` - This directory contains scripts that are meant to be run on Node.js.
 - `types` - This directory contains global TypeScript type definitions.
 - `env.js` - This file is used for managing type-safe environment variables.
+- `sanity.config.ts`	Config file for Sanity Studio
+- `sanity.cli.ts`	Config file for Sanity CLI
 
 <FileTree>
 - src
@@ -25,13 +27,18 @@ The folder structur is conventional and simple, so you can easily navigate throu
   - components/
   - actions/
   - hooks/
+  - sanity
+    - lib/
+    - schemaTypes/
   - lib
     - supabase/
     - stripe/
   - scripts/
   - types/
-  - configs.ts
-  - db.types.ts
+    - configs.ts
+    - db.types.ts
+  - sanity.config.ts
+  - sanity.cli.ts 
   - env.js
   - …
 </FileTree>
