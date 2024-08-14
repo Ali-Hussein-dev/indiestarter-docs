@@ -10,7 +10,7 @@ export default defineConfig({
   site: "https://docs.indie-starter.dev",
   integrations: [
     starlight({
-      title: "Indie Starter",
+      title: "",
       logo: {
         dark: "./src/assets/logo.svg",
         light: "./src/assets/logo.svg",
