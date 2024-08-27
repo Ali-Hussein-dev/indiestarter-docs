@@ -5,11 +5,19 @@ nextjs:
     title: Why Indie Starter?
 ---
 
+It is pretty easy to create a boilerplate, but the devil is hidden in the details, when you to create one for a wide range of projects, maintaing it, updating it with best practices.
+
 Indie Starter is more than just a boilerplate—it's a foundation for your next big project. It's designed with simplicity, versatility, and modern industry standards in mind. This guide will walk you through the core principles that drive Indie Starter, the tech stack it employs, and why it might be the perfect fit for your next project. Whether you're building a small personal project or a large-scale application, Indie Starter is designed to help you hit the ground running.
 
 ## Design Principles
 
 Here are the core design principles to help explain why I built Indie Starter, the problems that it exists to solve, and why Indie Starter may be the best choice for your project.
+
+### Beautiful user interface
+
+UI for SaaS landing pages is often undervalued, especially by technically-minded founders. Yet it's the digital storefront that can make or break a potential user's first impression. In a sea of alternatives, a well-crafted UI doesn't just attract attention — it communicates competence, reliability, and an understanding of user needs.
+
+Indie Starter is designed for engineers who solved problems and want to present their solution to the world in a beautiful way.
 
 ### Minimalistic (Less is more)
 
