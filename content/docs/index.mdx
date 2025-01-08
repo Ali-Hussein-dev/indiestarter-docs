@@ -2,7 +2,7 @@
 title: Indie starter Docs
 description: Learn how to install and configure IndieStarter
 ---
-
+import { urls } from "/constants/urls"
 
 ## Quick Links
 
@@ -10,21 +10,25 @@ description: Learn how to install and configure IndieStarter
   <Card
     title="Setup your project"
     description="Learn how to setup Indie Starter"
-    href="/guides/installation/"
+    href={urls.docs.installation}
+    external={false}
   />
   <Card
     title="Environment Variables"
     description="Learn more about type safe environment variables"
-    href="/guides/environment-variables"
+    href={urls.docs.envirnomentVariables}
+    external={false}
   />
   <Card
     title="Supabase Guide"
-    href="/guides/setup-db/"
+    href={urls.docs.setupDb}
+    external={false}
     description="Learn how to setup Supabase in your project"
   />
   <Card
     title="Payments integration Guide"
-    href="/guides/stripe"
+    href={urls.docs.stripe}
+    external={false}
     description="Stripe setup for guide"
   />
 </Cards>
