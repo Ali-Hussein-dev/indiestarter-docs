@@ -1,0 +1,21 @@
+export const urls = {
+    docs: {
+        installation: "docs/getting-started/installation",
+        whyIndieStarter: "docs/getting-started/why-indie-starter",
+        folderStructure: "docs/getting-started/folder-structure",
+        components: "docs/UI/components",
+        shadcn: "docs/UI/shadcn",
+        tailwindcss: "docs/UI/tailwindcss",
+        authentication: "docs/supabase/authentication",
+        setupDb: "docs/supabase/setup-db",
+        supabase: "docs/supabase/initialize-supabase",
+        configuartion: "docs/configuration/global-configuartion",
+        envirnomentVariables: "docs/configuration/environment-variables",
+        stripe: "docs/billing/stripe",
+        webhooks: "docs/billing/stripe-webhooks",
+        umami: "docs/analysis/umami",
+        sanity: "docs/CMS/sanity",
+        resend: "docs/resend",
+        seo: "docs/seo",
+    },
+}
