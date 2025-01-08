@@ -1,0 +1,63 @@
+---
+title: Folder Structure
+description: Learn how to navigate the folder structure of a Indie Starter application.
+---
+
+import { File, Folder, Files } from 'fumadocs-ui/components/files';
+
+The folder structure might be a bit different depending on the plan you choose, the pro plan project contains more folders and files than the starter plan project.
+
+The folder structur is conventional and simple, so you can easily navigate through the files and folders.
+
+## Files and directories
+
+- `app` - This directory contains the application's pages.
+- `components` - This is where all reusable components are stored.
+- `actions` - This directory contains server actions, which are functions that run on the server-side.
+- `hooks` - This is where custom React hooks are stored.
+- `lib` - This directory contains helper functions and third-party clients.
+- `scripts` - This directory contains scripts that are meant to be run on Node.js.
+- `types` - This directory contains global TypeScript type definitions.
+- `env.js` - This file is used for managing type-safe environment variables.
+- `sanity.config.ts`	Config file for Sanity Studio
+- `sanity.cli.ts`	Config file for Sanity CLI
+
+
+<Files>
+  <Folder name="src" defaultOpen>
+    <Folder name="app">
+      <Folder name="api" />
+    </Folder>
+    <Folder name="components" />
+    <Folder name="actions" />
+    <Folder name="hooks" />
+    <Folder name="sanity">
+      <Folder name="lib" />
+      <Folder name="schemaTypes" />
+    </Folder>
+    <Folder name="lib">
+      <Folder name="supabase" />
+      <Folder name="stripe" />
+    </Folder>
+    <Folder name="scripts" />
+    <Folder name="types">
+      <File name="configs.ts" />
+      <File name="db.types.ts" />
+    </Folder>
+    <File name="sanity.config.ts" />
+    <File name="sanity.cli.ts" />
+    <File name="env.js" />
+  </Folder>
+</Files>
+
+To import a file from the `src` folder you can use the `@/` alias, for example:
+
+```tsx
+import { Button } from '@/components/Button';
+// also
+import { useAuth } from '@/hooks/useAuth'; 
+// and last
+import { supabase } from '@/configs';
+```
+
+You can customize the import alias in the `tsconfig.json` file.

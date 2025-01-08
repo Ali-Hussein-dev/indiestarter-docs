@@ -1,0 +1,15 @@
+{
+  "title": "IndieStarter Docs",
+  "pages": [
+    "getting-started",
+    "configuration",
+    "billing",
+    "CMS",
+    "UI",
+    "supabase",
+    "analytics",
+    "---Others---",
+    "resend",
+    "seo"
+  ]
+}

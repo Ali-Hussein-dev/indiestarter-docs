@@ -1,0 +1,32 @@
+---
+title: Sanity
+description: Learn how to set up Sanity in Indie Starter.
+---
+
+[Sanity](https://sanity.io/docs) is a headless CMS that allows you to create and manage content for your website. Indie Starter comes with a pre-configured Sanity setup that you can use for a blog section. You don't need to be familiar with Sanity if you want to make a customization to the blog section.
+
+## Env Variables
+
+To set up Sanity, you need to add the following environment variables to your `.env.local` file:
+
+```env
+NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+NEXT_PUBLIC_SANITY_DATASET=your_dataset
+```
+
+These env variables are not mentioned in the `env.js` file, so you need to add them manually. they are the default setup for Sanity.
+
+## Sanity Studio (Add Content)
+
+To add content to your Sanity project, follow these steps:
+
+1. Navigate to `http://localhost:3000/studio` in your browser.
+2. You will be prompted to log in. After logging in, you will access the Sanity Studio where you can add your content.
+
+Make sure `localhost:3000` and your production domain `yoursite.com` are added to the `CORS Origins` in the Sanity dashboard under `API` tab.
+
+## Schema Types
+
+`src/sanity/schemaTypes` - This directory contains the schema types for Sanity. You can define the schema for your Sanity content in this directory.
+
+`src/sanity/lib` - This directory contains the client for Sanity. You can use this client to fetch data from Sanity.

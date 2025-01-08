@@ -1,0 +1,83 @@
+---
+title: Testing Stripe
+description: Learn how to test your webhooks locally with Stripe CLI.
+---
+import { Callout } from 'fumadocs-ui/components/callout';
+
+This guide walks you through the process of setting up Stripe webhooks for your project. Follow these steps to ensure a smooth integration.
+
+
+<Callout type="tip">
+    If you are new to Stripe webhooks, read the following guide from [Stripe](https://docs.stripe.com/webhooks#webhooks-def).
+</Callout>
+
+## Setting Up Stripe Webhooks
+
+Modify your webhook under the path `/app/api/webhooks/stripe/route.ts` and configure actions for certain events – like updating the DB or sending emails. Stripe has so many events that you can listen to, you can find the full list [here](https://stripe.com/docs/api/events/types). 
+
+The most common events are 
+- `checkout.session.completed` 
+- `customer.subscription.updated`.
+
+### Prerequisites
+
+- Ensure you have the Stripe CLI installed on your machine. Installation instructions can be found [here](https://stripe.com/docs/stripe-cli).
+
+### Testing Webhooks
+
+1. **Authenticate with Stripe CLI**
+
+   Open a terminal and log in to your Stripe account:
+
+   ```bash
+   stripe login
+   ```
+
+   Follow the on-screen instructions to complete the authentication process.
+
+2. **Start Listening to Events**
+
+   In a new terminal window, initiate listening to Stripe events:
+
+   ```bash
+   pnpm stripe:listen
+   ```
+
+   This command starts the Stripe CLI and listens for incoming webhook events.
+
+3. **Trigger Test Events**
+
+   To simulate a successful payment event, run:
+
+   ```bash
+   stripe trigger payment_intent.succeeded
+   ```
+
+   Upon triggering, you should observe log messages indicating the receipt of webhook events, similar to:
+
+   ```bash
+   ...
+   2024-05-28 09:31:09   --> invoice.paid [evt_1OEpMPILOQf67J5TjrUgRpk4]
+   2024-05-28 09:31:09  <--  [200] POST http://localhost:3001/stripe-webhook [evt_1OEpMPILOQf67J5TjrUgRpk4]
+   ...
+   ```
+
+### Common Errors
+
+- **Environment Variables Not Set**: Ensure all required environment variables are correctly configured.
+- **Incorrect `price_id`**: Verify the `price_id` used in your requests matches one from your Stripe dashboard.
+- **Missing `success_url` and `cancel_url`**: These URLs are essential for redirecting users upon transaction completion or cancellation.
+
+
+## Best practices for using webhooks
+
+- Handle duplicate events
+- Only listen to event types your integration requires
+- Handle events asynchrounously
+- Verify events are sent from Stripe
+
+For more detailed best practices, visit [Stripe webhooks](https://stripe.com/docs/webhooks/best-practices).
+
+<Callout type="tip">
+     Enhance your development experience with the [Stripe Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=Stripe.vscode-stripe). This tool allows you to build, test, and manage Stripe integrations directly within your editor.
+</Callout>
